@@ -11,11 +11,12 @@ import Entities.User;
 public interface ClaimserviceRemote {
 
 	public Claim getNextNotTreatedClaim();
-    public void claimIsTreated(Claim c);
+    public void claimIsTreated(int id);
 	public int claimNumber(User u);
-	public java.util.List<Claim> historyClaim(User u);
-	public void blockUser(User u);
+	public List<Claim> historyClaim();
+	public void blockUser(int id );
 	public List<Claim> getNextNotTreatedClaims();
 	 public void addClaim(Claim c);
 	public List<Claim> getClaim();
+	public List<Claim> nbofClaims();
 }
