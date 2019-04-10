@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1752.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.FuelLogisticManagerController">
+   <children>
+      <AnchorPane layoutX="-11.0" layoutY="-7.0" prefHeight="906.0" prefWidth="258.0" style="-fx-background-color: #171B2A;">
+         <children>
+            <Pane layoutX="8.0" layoutY="3.0" prefHeight="127.0" prefWidth="266.0" style="-fx-background-color: #171B2A;">
+               <children>
+                  <Text fill="#faf7f7" layoutX="20.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To your Platform" wrappingWidth="210.55491638183594">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <JFXButton fx:id="LeftButtonFleetReservation" alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="289.0" prefHeight="39.0" prefWidth="223.0" text="Fleet Reservation" textFill="#6edba1">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="LeftButtonFleetMaintenance" alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="360.0" prefHeight="39.0" prefWidth="223.0" text="Fleets" textFill="#6edba1">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="LeftButtonCheckCommands" alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="216.0" prefHeight="39.0" prefWidth="223.0" text="Check Commands " textFill="#6edba1">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="LeftButtonStatics" alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="426.0" prefHeight="39.0" prefWidth="223.0" text="Statics" textFill="#6edba1">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="NewCommandsList" layoutX="262.0" prefHeight="195.0" prefWidth="1494.0" style="-fx-background-color: white;">
+         <children>
+            <Text fill="#e53935" layoutX="92.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today's Date :">
+               <font>
+                  <Font name="Wingdings 3" size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="TextDate" layoutX="324.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="198.3999905033677" />
+            <Text fx:id="actualDate" layoutX="423.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="642.399937940103">
+               <font>
+                  <Font name="Wingdings" size="38.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="262.0" layoutY="176.0" prefHeight="715.0" prefWidth="1018.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane fx:id="CheckCommandsPane" layoutX="2.0" layoutY="-10.0" prefHeight="715.0" prefWidth="1482.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <JFXTabPane layoutX="-3.0" layoutY="27.0" prefHeight="590.0" prefWidth="973.0" style="-fx-background-color: white; -fx-border-color: white;">
+                     <tabs>
+                        <Tab fx:id="NewCommandsTab" style="-fx-background-color: #6edba1;" text="                   New Commands                   ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <TableView fx:id="NewCommandsTableView" layoutX="31.0" layoutY="38.0" prefHeight="396.0" prefWidth="896.0" style="-fx-background-color: white;">
+                                       <columns>
+                                          <TableColumn fx:id="NCDepartureAd" prefWidth="205.06668090820312" text="Departure Address" />
+                                          <TableColumn fx:id="NCArrivalAd" prefWidth="246.13330078125" text="Arrival Address" />
+                                          <TableColumn fx:id="NCRegistrationDate" minWidth="0.0" prefWidth="221.33331298828125" text="Registration Date" />
+                                          <TableColumn fx:id="NCDeadline" minWidth="0.0" prefWidth="218.93341064453125" text="Deadline" />
+                                          <TableColumn fx:id="numNewOrder" minWidth="0.0" prefWidth="218.93341064453125" text="numNewOrder" visible="false" />
+                                       </columns>
+                                    </TableView>
+                                    <Text fx:id="NCText" fill="#171b2a" layoutX="136.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Commands :  ">
+                                       <font>
+                                          <Font name="Wingdings 3" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXButton fx:id="NCButtonTreatedCommand" alignment="BOTTOM_LEFT" graphicTextGap="2.0" layoutX="720.0" layoutY="471.0" prefHeight="39.0" prefWidth="182.0" text="Treat Command " textFill="#e53935">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Text fx:id="nbrCommande" layoutX="285.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="42.13671875">
+                                       <font>
+                                          <Font name="Wingdings" size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="ReceivedCom" style="-fx-background-color: #6edba1;" text="                   Received Commands                 ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1482.0">
+                                 <children>
+                                    <TableView fx:id="receivedCommandTab" layoutX="54.0" layoutY="34.0" prefHeight="396.0" prefWidth="835.0" style="-fx-background-color: white;">
+                                       <columns>
+                                          <TableColumn fx:id="adresseDepRC" prefWidth="195.199951171875" text="Departure Address" />
+                                          <TableColumn fx:id="ArrivalAdresseRC" prefWidth="200.80001831054688" text="Arrival Address" />
+                                          <TableColumn fx:id="RegisDateRC" minWidth="0.0" prefWidth="227.1998291015625" text="Registration Date" />
+                                          <TableColumn fx:id="DeadlineRC" minWidth="0.0" prefWidth="206.39990234375" text="Receiving Date" />
+                                          <TableColumn fx:id="numNewOrder1" minWidth="0.0" prefWidth="0.0" text="numNewOrder" />
+                                       </columns>
+                                    </TableView>
+                                    <Text fill="#171b2a" layoutX="146.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Commands :  ">
+                                       <font>
+                                          <Font name="Wingdings 3" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nbrRecceivedCommands" layoutX="310.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="66.1365966796875" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab style="-fx-background-color: #6edba1;" text="                 Treated Commands                ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1261.0">
+                                 <children>
+                                    <TableView fx:id="TreatedComands" layoutX="64.0" layoutY="33.0" prefHeight="396.0" prefWidth="841.0" style="-fx-background-color: white;">
+                                       <columns>
+                                          <TableColumn fx:id="DepartureAddressT" prefWidth="172.00025939941406" text="Departure Address" />
+                                          <TableColumn fx:id="ArrivalDateT" prefWidth="192.0" text="Arrival Address" />
+                                          <TableColumn fx:id="RegistrationDateT" minWidth="0.0" prefWidth="210.400146484375" text="Registration Date" />
+                                          <TableColumn fx:id="DeadlineT" minWidth="0.0" prefWidth="258.39990234375" text="Delivery Date     " />
+                                          <TableColumn fx:id="numNewOrder2" minWidth="0.0" prefWidth="0.0" text="numNewOrder" />
+                                       </columns>
+                                    </TableView>
+                                    <Text fx:id="CountTreatedCommand" fill="#171b2a" layoutX="163.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Commands : 0 ">
+                                       <font>
+                                          <Font name="Wingdings 3" size="17.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <Pane fx:id="PaneDetails" layoutX="961.0" layoutY="-31.0" prefHeight="702.0" prefWidth="513.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton fx:id="XButton" layoutX="21.0" layoutY="14.0" prefHeight="42.0" prefWidth="43.0" style="-fx-background-color: #e53935;" text="X" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="24.0" />
+                           </font>
+                        </JFXButton>
+                        <GridPane layoutX="19.0" layoutY="98.0" prefHeight="568.0" prefWidth="441.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.53330078125" minWidth="10.0" prefWidth="198.66669921875" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5333251953125" minWidth="10.0" prefWidth="35.733300781249994" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.6666259765625" minWidth="10.0" prefWidth="201.6666259765625" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="86.40001831054687" minHeight="10.0" prefHeight="41.0666748046875" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="111.86663208007813" minHeight="10.0" prefHeight="52.53332519531249" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="169.66665039062502" minHeight="10.0" prefHeight="52.80000000000001" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="180.86666259765622" minHeight="10.0" prefHeight="53.19999999999999" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="182.86667480468748" minHeight="10.0" prefHeight="51.86663818359372" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="176.46662597656245" minHeight="10.0" prefHeight="45.73336181640627" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Command Number :" wrappingWidth="200.72362318797968">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Command Type : " wrappingWidth="199.53346628695726" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity : " wrappingWidth="201.66676706820726" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Provider Full Name :" wrappingWidth="200.60011667758226" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Provider Phone N°:" wrappingWidth="200.60011667758226" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager Full Name :" wrappingWidth="200.60011667758226" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager Phone N°:" wrappingWidth="200.60011667758226" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textDetail1" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Full Name :" wrappingWidth="200.60011667758226" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textDetail2" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Phone N°:" wrappingWidth="200.60011667758226" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textDetail3" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Fleet Registration N°:" wrappingWidth="200.60011667758226" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textDetail4" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Fleet Type :" wrappingWidth="200.60011667758226" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <JFXTextArea fx:id="cmdTypeDet" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="QuantityDet" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="ProviderNameDet" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="ProviderPhoneDet" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="ManagerNameDet" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="ManagerPhoneDet" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="DriverNameDet" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="DriverPhoneDet" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="FleetRegistrationNDet" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="FleetTypeDet" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font></JFXTextArea>
+                              <JFXTextArea fx:id="cmdNumDet" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="99.0" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="22.0" />
+                                 </font>
+                              </JFXTextArea>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane fx:id="FleetReservationPane" layoutX="-2.0" layoutY="-8.0" prefHeight="733.0" prefWidth="1492.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <GridPane layoutX="33.0" layoutY="127.0" prefHeight="307.0" prefWidth="672.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.2" minWidth="10.0" prefWidth="211.7999755859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.4000244140625" minWidth="0.0" prefWidth="203.00003662109373" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.4000244140625" minWidth="10.0" prefWidth="26.19996337890626" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.3999755859375" minWidth="10.0" prefWidth="218.40000000000003" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="112.8000244140625" minHeight="10.0" prefHeight="88.59998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="226.39995117187502" minHeight="10.0" prefHeight="19.80001220703126" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="236.2" minHeight="10.0" prefHeight="93.20001220703125" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="236.2" minHeight="10.0" prefHeight="39.399987792968744" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="236.2" minHeight="10.0" prefHeight="39.399987792968744" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="236.2" minHeight="0.0" prefHeight="86.60001220703126" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTextArea focusColor="#6edba1" prefHeight="79.0" prefWidth="254.0" text="&#10;Choose the type of fleet :" unFocusColor="#6edba1">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="17.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXComboBox fx:id="ComboTypeFleet" focusColor="#6edba1" prefHeight="74.0" prefWidth="198.0" unFocusColor="#15222e" GridPane.columnIndex="3" />
+                        <JFXTextArea focusColor="#6edba1" layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="433.0" text="&#10;Pick the available fleet to  transport the command : " unFocusColor="#6edba1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="17.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXComboBox fx:id="ComboBoxAvailableFleet" focusColor="#6edba1" layoutX="486.0" layoutY="12.0" prefHeight="73.0" prefWidth="188.0" unFocusColor="#15222e" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXTextArea focusColor="#6edba1" prefHeight="67.0" prefWidth="198.0" text="&#10;Pick the Driver :" unFocusColor="#6edba1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="17.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXComboBox fx:id="Pickdriver" focusColor="#6edba1" prefHeight="73.0" prefWidth="188.0" unFocusColor="#15222e" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <JFXButton fx:id="SaveButtonCommande" layoutX="462.0" layoutY="488.0" prefHeight="42.0" prefWidth="180.0" text="Save" textFill="#6edba1">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="CancelButton" layoutX="160.0" layoutY="488.0" prefHeight="42.0" prefWidth="180.0" text="Cancel" textFill="#e53935">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="ComboUserInvisible" layoutX="732.0" layoutY="389.0" visible="false" />
+                  <Pane fx:id="PaneGrid" layoutX="769.0" layoutY="27.0" prefHeight="609.0" prefWidth="642.0" visible="false">
+                     <children>
+                        <GridPane layoutX="61.0" layoutY="48.0" prefHeight="483.0" prefWidth="467.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="201.9999755859375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.5999755859375" minWidth="0.0" prefWidth="34.39990234374997" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.20009765625002" minWidth="10.0" prefWidth="231.20009765625002" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text=" Fleet Brand :" wrappingWidth="157.336669921875" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="10.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Fleet :" wrappingWidth="157.336669921875" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="10.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Weight :" wrappingWidth="157.336669921875" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="10.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Date :" wrappingWidth="157.336669921875" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridBrandF" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="228.8033447265625" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="10.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintenance Date :" wrappingWidth="206.1365966796875" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Full Name :" wrappingWidth="206.1365966796875" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="10.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number :" wrappingWidth="206.1365966796875" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridTypeF" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridPurchaseD" fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171b2a" layoutX="247.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration N° :" wrappingWidth="229.336669921875">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridMaxW" fill="#171b2a" layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridRegistN" fill="#171b2a" layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridphoneD" fill="#171b2a" layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridDriverName" fill="#171b2a" layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gridMainD" fill="#171b2a" layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.336669921875" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Franklin Gothic Heavy" size="19.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="backButton" layoutX="8.0" layoutY="6.0" prefHeight="59.0" prefWidth="86.0" text="&lt;&lt;" textFill="#e53935">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="31.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="FleetMaintenancePane" prefHeight="715.0" prefWidth="1494.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTabPane fx:id="TabPaneFleet" prefHeight="590.0" prefWidth="1235.0" style="-fx-background-color: white; -fx-border-color: white;">
+                     <tabs>
+                        <Tab fx:id="tabAjoutFleetPane" style="-fx-background-color: #6edba1;" text="                                  Add Fleet                                   ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <GridPane layoutX="164.0" layoutY="102.0" prefHeight="330.0" prefWidth="633.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.79998779296875" minWidth="10.0" prefWidth="264.1333374023437" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.5333251953125" minWidth="10.0" prefWidth="93.80000000000001" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.53339843749995" minWidth="10.0" prefWidth="353.80000000000007" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Fleet Registration N°:" wrappingWidth="264.60011667758226">
+                                             <font>
+                                                <Font name="Franklin Gothic Heavy" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Fleet Type :" wrappingWidth="264.60011667758226" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="Franklin Gothic Heavy" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Weight :" wrappingWidth="264.60011667758226" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Franklin Gothic Heavy" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Date :" wrappingWidth="264.60011667758226" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Franklin Gothic Heavy" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#171b2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Fleet Brand :" wrappingWidth="264.60011667758226" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Franklin Gothic Heavy" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXDatePicker fx:id="datePickerAj" prefHeight="28.0" prefWidth="398.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <JFXComboBox fx:id="typeFleetAjout" prefHeight="26.0" prefWidth="327.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                          <JFXTextField fx:id="matriculeAj" prefHeight="26.0" prefWidth="282.0" GridPane.columnIndex="2" />
+                                          <JFXTextField fx:id="BrandAj" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <JFXTextField fx:id="weightAjout" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                    <JFXButton fx:id="ajoutFleetBtn" alignment="BOTTOM_LEFT" graphicTextGap="2.0" layoutX="706.0" layoutY="478.0" prefHeight="39.0" prefWidth="118.0" text="    Save   " textFill="#6edba1">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Text fill="#e53935" layoutX="83.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please , insert all the fleet informations : ">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="TabFleetList" style="-fx-background-color: #6edba1;" text="                                       Fleet List                                      ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1482.0">
+                                 <children>
+                                    <TableView fx:id="FleetList" layoutX="36.0" layoutY="40.0" prefHeight="356.0" prefWidth="912.0" style="-fx-background-color: white; -fx-border-color: white;">
+                                      <columns>
+                                        <TableColumn fx:id="RegisterList" prefWidth="139.46678924560547" text="Registeration N° " />
+                                        <TableColumn fx:id="typeFleetList" prefWidth="113.066650390625" text="Type" />
+                                          <TableColumn fx:id="brandList" prefWidth="121.60009765625" text="Brand" />
+                                          <TableColumn fx:id="weightList" prefWidth="133.06655883789062" text="Max Weight  " />
+                                          <TableColumn fx:id="dateAchatList" prefWidth="175.2000732421875" text="Purchase Date" />
+                                          <TableColumn fx:id="entretienDateList" prefWidth="222.39990234375" text="Annual Maintenance Date " />
+                                      </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="enPanneButton" alignment="BOTTOM_LEFT" graphicTextGap="2.0" layoutX="1015.0" layoutY="211.0" prefHeight="39.0" prefWidth="146.0" text="Fleet Down" textFill="#e53935">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="updateFleetButton" alignment="BOTTOM_LEFT" graphicTextGap="2.0" layoutX="1013.0" layoutY="290.0" prefHeight="39.0" prefWidth="146.0" text="Modify Fleet" textFill="#6edba1">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Text fx:id="totFleets" layoutX="87.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fleets : 0">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXButton fx:id="deleteFleetBtn" alignment="BOTTOM_LEFT" graphicTextGap="2.0" layoutX="1017.0" layoutY="123.0" prefHeight="39.0" prefWidth="146.0" text="Delete Fleet" textFill="#6edba1">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="TabMainFleet" style="-fx-background-color: #6edba1;" text="                         Fleet Maintenance                            ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1330.0">
+                                 <children>
+                                    <TableView fx:id="MaintenanceTab" layoutX="258.0" layoutY="123.0" prefHeight="362.0" prefWidth="639.0" style="-fx-background-color: white;">
+                                       <columns>
+                                          <TableColumn fx:id="registerationMain" prefWidth="153.86670684814453" text="Registeration N° " />
+                                          <TableColumn fx:id="typeMain" prefWidth="150.133544921875" text="Type" visible="false" />
+                                          <TableColumn fx:id="weightMain" prefWidth="144.80001831054688" text="EntryDate" />
+                                          <TableColumn fx:id="achatDateMain" prefWidth="195.999755859375" text="ReleaseDate" />
+                                          <TableColumn fx:id="typeRepairMain" prefWidth="180.2666015625" text="Type Repair" visible="false" />
+                                          <TableColumn fx:id="repairPriceMain" prefWidth="141.066650390625" text="Repair price " />
+                                       </columns>
+                                    </TableView>
+                                    <JFXTextField fx:id="matriculeRecherche" layoutX="522.0" layoutY="55.0" prefHeight="26.0" prefWidth="206.0" />
+                                    <Text fill="#e53935" layoutX="414.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search :">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nbrmain" layoutX="307.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fleet Maintenance : 0">
+                                       <font>
+                                          <Font name="Franklin Gothic Heavy" size="18.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </Pane>
+            <Pane fx:id="StaticsPane" layoutX="10.0" layoutY="10.0" prefHeight="712.0" prefWidth="1287.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="6.0" prefHeight="699.0" prefWidth="1486.0" style="-fx-background-color: white;">
+                     <children>
+                        <PieChart fx:id="fleetsPie" labelLineLength="50.0" layoutX="136.0" layoutY="134.0" prefHeight="355.0" prefWidth="365.0" style="-fx-border-color: #6edba1;" title="Fleets PieChart " />
+                        <PieChart fx:id="CommandsPie" labelLineLength="50.0" layoutX="530.0" layoutY="134.0" prefHeight="355.0" prefWidth="365.0" style="-fx-border-color: #6edba1;" title="Commands PieChart " />
+                        <PieChart fx:id="DriversPie" labelLineLength="50.0" layoutX="936.0" layoutY="135.0" prefHeight="355.0" prefWidth="365.0" style="-fx-border-color: #6edba1;" title="Drivers PieChart " />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
