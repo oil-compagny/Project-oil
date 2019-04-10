@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="251.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../main/images/Success.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="msg" layoutX="29.0" layoutY="143.0" prefHeight="40.0" prefWidth="205.0" text="Add with success" textFill="#086806">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
