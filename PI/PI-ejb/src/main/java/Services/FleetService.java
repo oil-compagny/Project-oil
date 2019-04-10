@@ -7,6 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import Entities.Fleet;
+import Entities.Maintenance;
+import Entities.Reservation;
 import Entities.User;
 import Interfaces.FleetServiceRemote;
 
@@ -96,6 +98,58 @@ public class FleetService implements  FleetServiceRemote{
 		List<Fleet> liste = em.createQuery("select u from Fleet u where u.malfunction= :val",Fleet.class).setParameter("val",false).getResultList();
 		return  liste;
 	}
+
+	@Override
+	public List<Maintenance> findByFleet(Fleet f) {
+		List<Maintenance> liste = em.createQuery("select u from maintenance u where u.fleet=:val",Maintenance.class).setParameter("val",f).getResultList();
+		return  liste;
+	}
+	@Override
+	public void removeReservation(int id) {
+		System.out.println("remove maintenance !");
+	    em.remove(em.find(Reservation.class, id));
+	    System.out.println("remove maintenance done ! " );		
+	}
+	@Override
+	public List<Reservation> findByFleet(Reservation f) {
+		List<Reservation> liste = em.createQuery("select u from reservation u where u.fleet=:val",Reservation.class).setParameter("val",f).getResultList();
+		return  liste;
+	}
+	@Override
+	public void removeMaintenance(int id) {
+		System.out.println("remove maintenance !");
+	    em.remove(em.find(Maintenance.class, id));
+	    System.out.println("remove maintenance done ! " );		
+	}
+
+	@Override
+	public void addMaintenance(Maintenance m) {
+		System.out.println("add maintainence  !");
+		em.persist(m);
+		System.out.println("add maintainence done!" );
+				
+	}
+
+	@Override
+	public List<Fleet> findAllFleetNonFCT() {
+		List<Fleet> liste = em.createQuery("select u from Fleet u where u.malfunction= :val ",Fleet.class).setParameter("val",true).getResultList();
+		return  liste;	
+	}
+
 	
+
+	@Override
+	public List<User> findAllNoneActifUser() {
+		String role="Chauffeur";
+		List<User> liste = em.createQuery("select u from User u where  u.role like CONCAT('%',:type ) and u.isActif= :val ",User.class).setParameter("type",role).setParameter("val",true).getResultList();
+		return  liste;			
+	}
+
+	@Override
+	public List<User> findAllActifUser() {
+		String role="Chauffeur";
+		List<User> liste = em.createQuery("select u from User u where  u.role like CONCAT('%',:type ) and u.isActif= :val ",User.class).setParameter("type",role).setParameter("val",false).getResultList();
+		return  liste;	
+	}
 
 }

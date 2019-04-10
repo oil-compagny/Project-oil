@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import Entities.Fleet;
 import Entities.Maintenance;
 import Interfaces.MaintenanceServiceRemote;
 
@@ -56,6 +57,12 @@ public class MaintenanceService implements  MaintenanceServiceRemote{
          List <Maintenance> main =em.createQuery("from Maintenance", Maintenance.class).getResultList() ;
          System.out.println("find all maintenances done " );		
          return main;		
+	}
+
+	@Override
+	public List<Maintenance> findMainFleets() {
+		List<Maintenance> liste = em.createQuery("select m from maintenance m inner join m.fleet ",Maintenance.class).getResultList();
+		return  liste;
 	}
 	
 
