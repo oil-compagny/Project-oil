@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.AddOilWellController">
+   <children>
+      <Label layoutX="63.0" layoutY="322.0" prefHeight="36.0" prefWidth="225.0" text="Estimated Quantity" textFill="#7c8184">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="411.0" prefHeight="45.0" prefWidth="239.0" text="Extracted Quantity" textFill="#7c8184">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="238.0" prefHeight="38.0" prefWidth="214.0" text="Zone Location  " textFill="#fc291e">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="148.0" fitWidth="149.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="19.0" layoutY="138.0" text="Lion Oil" textFill="#000000e8">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelZoneName" layoutX="306.0" layoutY="238.0" prefHeight="32.0" prefWidth="318.0" textFill="#2fc3f5">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font></Label>
+      <HBox layoutX="483.0" layoutY="355.0" styleClass="sidebar-btn" stylesheets="@stylesheet.css">
+         <children>
+            <JFXButton fx:id="AjoutPuits" layoutX="528.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#Ajouter_puits" prefHeight="35.0" prefWidth="133.0" ripplerFill="WHITE" style="-fx-background-color: #22aae2; -fx-background-radius: 0px;" text="Save">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIcon fill="#ffa60c" iconName="CHECK" layoutX="483.0" layoutY="386.0" size="3em" text="" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="395.0" fitWidth="239.0" layoutX="408.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/Baril.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="qte_estime" focusColor="WHITE" layoutX="288.0" layoutY="325.0" style="-fx-background-color: grey;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="qte_extraite" focusColor="WHITE" layoutX="288.0" layoutY="418.0" style="-fx-background-color: grey;" unFocusColor="WHITE" />
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="25.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/map.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="22.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/oil.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="22.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/oil.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="L1" layoutX="106.0" layoutY="482.0" prefHeight="31.0" prefWidth="521.0" textFill="#fc1020">
+         <font>
+            <Font name="FontAwesome Regular" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

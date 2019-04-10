@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.OilStatisticsController">
+   <children>
+      <BarChart fx:id="barchart" layoutY="53.0" prefHeight="547.0" prefWidth="724.0">
+         <xAxis>
+            <CategoryAxis label="Oil Wells" side="BOTTOM" fx:id="x" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y" label="Estimated Quantity" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Label layoutX="44.0" prefHeight="44.0" prefWidth="248.0" text="Oil Wells Exploration : " textFill="RED">
+         <font>
+            <Font name="FontAwesome Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/B2.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="382.0" layoutY="10.0" onMouseClicked="#load_barchart" prefHeight="7.0" prefWidth="102.0" style="-fx-background-color: orange; -fx-background-radius: 20;" text="Display Barchart" />
+   </children>
+</Pane>

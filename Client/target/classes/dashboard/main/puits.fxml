@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="137.0" style="-fx-background-color: #F0F0F0; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.puitsController">
+   <children>
+      <VBox layoutX="1.0" layoutY="6.0" prefHeight="137.0" prefWidth="154.0">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="152.0">
+               <children>
+                  <Region prefHeight="75.0" prefWidth="49.0" />
+                  <ImageView fitHeight="73.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow color="#ebebeb" />
+                     </effect>
+                     <image>
+                        <Image url="@../../tn/esprit/dashboard/images/precios_petroleo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="70.0" prefWidth="68.0" />
+               </children>
+            </HBox>
+            <Region prefHeight="12.0" prefWidth="158.0" />
+            <HBox prefHeight="16.0" prefWidth="146.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="94.0" style="-fx-text-fill: #22aae2;" text="Extracted qty:" textFill="#22aae294">
+                     <font>
+                        <Font name="Arial Black" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="qte_extraite" layoutX="5.0" layoutY="52.0" prefHeight="16.0" prefWidth="66.0" style="-fx-text-fill: #ea950d;" text="Unit price" textFill="#ea950d94">
+                     <font>
+                        <Font name="Arial Black" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Region prefHeight="11.0" prefWidth="165.0" />
+            <HBox prefHeight="6.0" prefWidth="175.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="92.0" style="-fx-text-fill: #22aae2;" text="Estimated qty:" textFill="#46424294">
+                     <font>
+                        <Font name="Arial Black" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="qte_estime" layoutX="5.0" layoutY="52.0" prefHeight="16.0" prefWidth="67.0" style="-fx-text-fill: #ea950d;" text="Unit price" textFill="#46424294">
+                     <font>
+                        <Font name="Arial Black" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow color="#d3cdcd" />
+   </effect>
+</Pane>

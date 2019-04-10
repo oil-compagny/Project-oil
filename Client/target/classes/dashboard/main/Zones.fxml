@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane fx:id="ContentArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.ZonesController">
+   <children>
+      <Pane fx:id="pane" layoutY="135.0" prefHeight="346.0" prefWidth="724.0" style="-fx-background-color: White;">
+         <children>
+            <Pane layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="226.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Label fx:id="zoneName1" alignment="CENTER" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="226.0" textFill="#ff1515">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="3.0" layoutY="55.0" prefHeight="159.0" prefWidth="221.0">
+                     <children>
+                        <ImageView fitHeight="165.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <DropShadow color="#ebebeb" />
+                           </effect>
+                           <image>
+                              <Image url="@../../tn/esprit/dashboard/images/PlatformHolly.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label layoutX="7.0" layoutY="274.0" textFill="#1ea362">
+                     <font>
+                        <Font name="Roboto Medium" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn1" layoutX="102.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#show_details" prefHeight="30.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #22aae2; -fx-background-radius: 0px;" text="Show details">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <TextArea editable="false" layoutX="1.0" layoutY="211.0" prefHeight="61.0" prefWidth="226.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #7c8184;" text="In east coast of the Mediterranean Sea, &#10;The gulf has a large range up to 2.1 m." />
+                  <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../tn/esprit/dashboard/images/map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow color="#d3cdcd" />
+               </effect>
+            </Pane>
+            <Pane layoutX="484.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="226.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Label fx:id="zoneName3" alignment="CENTER" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="226.0" textFill="#ff1515">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="126.0" fitWidth="213.0" layoutX="7.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow color="#ebebeb" />
+                     </effect>
+                     <image>
+                        <Image url="@../../tn/esprit/dashboard/images/douz_.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="5.0" layoutY="222.0" prefHeight="20.0" prefWidth="226.0" textFill="#616161">
+                     <font>
+                        <Font name="Roboto Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="5.0" layoutY="242.0" prefHeight="20.0" prefWidth="226.0" textFill="#616161">
+                     <font>
+                        <Font name="Roboto Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="274.0" textFill="#1ea362">
+                     <font>
+                        <Font name="Roboto Medium" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn3" layoutX="102.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#show_details2" prefHeight="30.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #22aae2; -fx-background-radius: 0px;" text="Show details">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <TextArea editable="false" layoutX="2.0" layoutY="190.0" prefHeight="77.0" prefWidth="226.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #7c8184;" text="its location at the foot of the Eastern&#10; Grand Erg at the northern edge of the &#10;Sahara Desert, it's the “Gate of the&#10; Desert&quot;." />
+                  <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../tn/esprit/dashboard/images/map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow color="#d3cdcd" />
+               </effect>
+            </Pane>
+            <Pane layoutX="242.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="226.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Label fx:id="zoneName2" alignment="CENTER" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="226.0" textFill="#ff1515">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="3.0" layoutY="47.0" prefHeight="165.0" prefWidth="220.0">
+                     <children>
+                        <ImageView fitHeight="165.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <DropShadow color="#ebebeb" />
+                           </effect>
+                           <image>
+                              <Image url="@../../tn/esprit/dashboard/images/32993-509586.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label layoutX="5.0" layoutY="242.0" prefHeight="20.0" prefWidth="226.0" textFill="#616161">
+                     <font>
+                        <Font name="Roboto Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="274.0" textFill="#1ea362">
+                     <font>
+                        <Font name="Roboto Medium" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn2" layoutX="102.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#show_details1" prefHeight="30.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #22aae2; -fx-background-radius: 0px;" text="Show details">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="15.0" layoutY="252.0" prefHeight="20.0" prefWidth="226.0" textFill="#616161">
+                     <font>
+                        <Font name="Roboto Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="-5.0" layoutY="248.0" prefHeight="20.0" prefWidth="226.0" textFill="#616161">
+                     <font>
+                        <Font name="Roboto Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea editable="false" layoutX="-3.0" layoutY="198.0" prefHeight="77.0" prefWidth="232.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #7c8184;" text="Is a commune and coastal town in south&#10; eastern Tunisia, close to the border &#10;with Libya." />
+                  <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../tn/esprit/dashboard/images/map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow color="#d3cdcd" />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="118.0" fitWidth="127.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="8.0" layoutY="109.0" prefHeight="27.0" prefWidth="89.0" text=" Lion Oil" textFill="#545151">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="541.0" layoutY="3.0" text="Confidential" textFill="#171717" underline="true">
+         <font>
+            <Font name="Calibri Light" size="36.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon iconName="LOCK" layoutX="511.0" layoutY="36.0" size="3em" />
+   </children>
+</Pane>

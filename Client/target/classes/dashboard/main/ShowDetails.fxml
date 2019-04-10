@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane fx:id="ContentArea" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.ShowDetailsController">
+   <children>
+      <VBox layoutX="45.0" layoutY="287.0" prefHeight="275.0" prefWidth="454.0">
+         <children>
+            <ScrollPane prefHeight="277.0" prefWidth="454.0">
+               <content>
+                  <VBox fx:id="contenu" prefHeight="274.0" prefWidth="452.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <Label layoutX="233.0" layoutY="20.0" text="Location :" textFill="#f00c11">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="93.0" prefHeight="22.0" prefWidth="171.0" text="TOTAL oil wells    :" textFill="#7c8184">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="461.0" layoutY="93.0" text="Start Date :" textFill="#7c8184">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="461.0" layoutY="142.0" text="End Date :" textFill="#7c8184">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="140.0" prefHeight="27.0" prefWidth="198.0" text="TOTAL of barrels :" textFill="#7c8184">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="L1" layoutX="263.0" layoutY="94.0" text="Label" textFill="#7c8184">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font></Label>
+      <Label fx:id="labelDate" layoutX="583.0" layoutY="93.0" text="Label" textFill="#7c8184">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font></Label>
+      <Label fx:id="labelDatefin" layoutX="584.0" layoutY="140.0" text="Label" textFill="#7c8184">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="labelTotal" layoutX="263.0" layoutY="144.0" text="Label" textFill="#7c8184">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font></Label>
+      <Label layoutX="106.0" layoutY="244.0" text="List Of Oilwells :" textFill="#7c8184" underline="true">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="AjoutPuits" layoutX="537.0" layoutY="378.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#Ajouter_puits" prefHeight="47.0" prefWidth="135.0" ripplerFill="WHITE" style="-fx-background-color: #22aae2; -fx-background-radius: 0px;" text="+ Oil well" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="zoneName" layoutX="346.0" layoutY="10.0" prefHeight="35.0" prefWidth="372.0" text="Label" textFill="#57d325">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="42.0" layoutX="195.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/map.png" />
+         </image>
+      </ImageView>
+      <FontAwesomeIcon fill="#f29501" iconName="CALENDAR" layoutX="433.0" layoutY="113.0" size="2em" />
+      <FontAwesomeIcon fill="#f29501" iconName="CALENDAR" layoutX="432.0" layoutY="160.0" size="2em" />
+      <ImageView fitHeight="52.0" fitWidth="35.0" layoutX="25.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/oil.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="112.0" layoutX="2.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/oilwells.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="57.0" layoutX="17.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../tn/esprit/dashboard/images/puits.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

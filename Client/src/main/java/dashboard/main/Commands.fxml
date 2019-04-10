@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.testapps.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #333645;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.main.CommandsController">
+   <children>
+      <Pane fx:id="pnlOverview" layoutX="-3.0" layoutY="-1.0" prefHeight="583.0" prefWidth="796.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="103.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../tn/esprit/dashboard/images/kiosk.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="138.0" layoutY="41.0" text="Carburant Orders" textFill="#ff8011">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="68.0" layoutY="89.0" prefHeight="92.0" prefWidth="689.0" spacing="50.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="22000" textFill="#2a73ff">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Orders" textFill="#787474" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="1500" textFill="#26bfbc">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total delivered" textFill="#787474" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="1000" textFill="#fa5f7e">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Peding Orders" textFill="#787474" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="780" textFill="#de0000">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label text="Orders on Hold" textFill="#787474" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane fx:id="ContenetArea" layoutX="45.0" layoutY="178.0">
+               <children>
+                  <ScrollPane fx:id="scrollPaneID" layoutY="55.0" prefHeight="324.0" prefWidth="664.0">
+                    <content>
+                        <VBox fx:id="vbID" layoutX="59.0" layoutY="25.0" prefHeight="311.0" prefWidth="658.0" />
+                    </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="665.0" spacing="60.0" style="-fx-background-color: #F0F0F0;">
+                     <children>
+                        <Region prefHeight="37.0" prefWidth="11.0" />
+                        <Label prefHeight="17.0" prefWidth="100.0" text="Gas station Name" textFill="#2b2727">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Gasoline" textFill="#2b2727">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Diesel" textFill="#2b2727">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Mazout" textFill="#2b2727">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Action" textFill="#2b2727">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <ImageView fitHeight="63.0" fitWidth="103.0" layoutX="26.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../tn/esprit/dashboard/images/pump.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</StackPane>
