@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorpaneinscrip" fx:id="idW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" styleClass="anchorpaneinscrip" stylesheets="@../css/Inscription.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InscriptionController">
+   <children>
+      <Pane id="anchorpaneinscrip" layoutX="14.0" layoutY="15.0" prefHeight="738.0" prefWidth="853.0" style="-fx-background-radius: 45;" stylesheets="@../css/Inscription.css">
+         <children>
+            <JFXTextField fx:id="txtName" focusColor="#3da8c3" labelFloat="true" layoutX="241.0" layoutY="143.0" onKeyReleased="#test4" prefHeight="31.0" prefWidth="239.0" unFocusColor="#3da8c3" />
+            <JFXTextField fx:id="txtLastName" focusColor="#3da8c3" labelFloat="true" layoutX="242.0" layoutY="204.0" onKeyReleased="#test6" prefHeight="31.0" prefWidth="239.0" unFocusColor="#3da8c3" />
+            <JFXTextField fx:id="txtPhone" focusColor="#3da8c3" labelFloat="true" layoutX="246.0" layoutY="272.0" onKeyReleased="#test5" prefHeight="31.0" prefWidth="232.0" unFocusColor="#3da8c3" />
+            <JFXTextField fx:id="txtMail" focusColor="#3da8c3" labelFloat="true" layoutX="246.0" layoutY="323.0" onKeyReleased="#test1" prefHeight="31.0" prefWidth="232.0" unFocusColor="#3da8c3" />
+            <JFXTextField fx:id="txtLogin" focusColor="#3da8c3" labelFloat="true" layoutX="246.0" layoutY="381.0" onKeyPressed="#test2" prefHeight="31.0" prefWidth="232.0" unFocusColor="#3da8c3" />
+            <Label layoutX="151.0" layoutY="14.0" text="Inscription" textFill="#00eed2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCin" focusColor="#3da8c3" labelFloat="true" layoutX="241.0" layoutY="88.0" onKeyPressed="#test3" prefHeight="31.0" prefWidth="239.0" unFocusColor="#3da8c3" />
+            <JFXTextField fx:id="txtPassword" focusColor="#3da8c3" labelFloat="true" layoutX="243.0" layoutY="441.0" onKeyReleased="#test7" prefHeight="31.0" prefWidth="239.0" unFocusColor="#3da8c3" />
+            <Label layoutX="49.0" layoutY="101.0" prefHeight="35.0" prefWidth="87.0" text="ID card" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="159.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="219.0" text="Last Name" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="274.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="325.0" text="Mail" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="383.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="443.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="494.0" text="Role" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comboRole" focusColor="#3da8c3" layoutX="245.0" layoutY="492.0" prefHeight="31.0" prefWidth="232.0" unFocusColor="#3da8c3" />
+            <JFXButton fx:id="registerbtn" layoutX="165.0" layoutY="672.0" onAction="#AddUser" prefHeight="42.0" prefWidth="196.0" style="-fx-background-color: #00eed2; -fx-background-radius: 45;" text="Register">
+               <font>
+                  <Font size="19.0" />
+               </font></JFXButton>
+            <Label fx:id="LW" layoutX="485.0" layoutY="382.0" prefHeight="30.0" prefWidth="252.0" textFill="WHITE" />
+            <Label fx:id="IDW" layoutX="480.0" layoutY="88.0" prefHeight="31.0" prefWidth="245.0" textFill="#fffafa" />
+            <Label fx:id="nameW" layoutX="491.0" layoutY="145.0" prefHeight="28.0" prefWidth="239.0" textFill="WHITE" />
+            <Label fx:id="PW" layoutX="501.0" layoutY="287.0" prefHeight="28.0" prefWidth="239.0" textFill="WHITE" />
+            <Label fx:id="LastW" layoutX="491.0" layoutY="219.0" prefHeight="28.0" prefWidth="239.0" textFill="WHITE" />
+            <Label fx:id="MW" layoutX="480.0" layoutY="325.0" prefHeight="28.0" prefWidth="232.0" textFill="WHITE" />
+            <Label fx:id="PDW" layoutX="498.0" layoutY="456.0" prefHeight="28.0" prefWidth="239.0" textFill="#fffefe" />
+            <Label layoutX="38.0" layoutY="558.0" text="Country" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cb" layoutX="247.0" layoutY="559.0" onHidden="#BuildItems1" onMouseDragExited="#BuildItems1" onMouseDragOver="#BuildItems1" onMouseDragReleased="#BuildItems1" onScrollFinished="#BuildItems1" prefHeight="25.0" prefWidth="232.0" />
+            <JFXComboBox fx:id="cb1" layoutX="245.0" layoutY="619.0" onScrollFinished="#BuildItems1" prefHeight="25.0" prefWidth="232.0" />
+            <Label layoutX="42.0" layoutY="620.0" text="State" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnLogin" layoutX="1240.0" layoutY="27.0" onAction="#out" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: #00eed2; -fx-background-radius: 49;" text="Login">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

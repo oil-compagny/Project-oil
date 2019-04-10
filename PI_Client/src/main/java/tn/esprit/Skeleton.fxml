@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkeletonController">
+   <children>
+      <VBox layoutY="67.0" prefHeight="702.0" prefWidth="192.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <ImageView fitHeight="153.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/56669468_428510664621281_430539517594697728_n.jpg" />
+               </image>
+            </ImageView>
+            <Label prefHeight="18.0" prefWidth="193.0" text="Rahali Mohamed Lamine" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="86.0" prefWidth="192.0" />
+            <JFXButton fx:id="btnHome" onAction="#switchHome" prefHeight="52.0" prefWidth="192.0" text="Home" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUser" onAction="#switchUser" prefHeight="52.0" prefWidth="192.0" text="Users" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnWorkers" onAction="#switchWorkers" prefHeight="52.0" prefWidth="192.0" text="Workers" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/workers.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <VBox prefHeight="238.0" prefWidth="192.0" />
+            <JFXButton fx:id="btnSignOut" onAction="#SwitchLogin" prefHeight="52.0" prefWidth="192.0" text="SignOut" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <HBox layoutY="-2.0" prefHeight="70.0" prefWidth="1360.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="1179.0" />
+            <JFXButton fx:id="btnClaims" onAction="#switchClaims" prefHeight="38.0" prefWidth="33.0" text=".">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/claim.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="count" text="0" textFill="WHITE" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="holderPane" layoutX="192.0" layoutY="68.0" prefHeight="702.0" prefWidth="1168.0" />
+   </children>
+</AnchorPane>

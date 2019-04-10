@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClaimClientController">
+   <children>
+      <JFXTextArea fx:id="claimAr" layoutX="496.0" layoutY="331.0" />
+      <JFXButton fx:id="back" layoutX="1212.0" layoutY="40.0" onAction="#back" prefHeight="48.0" prefWidth="110.0" style="-fx-background-color: red;" text="SignOut" />
+      <JFXComboBox fx:id="cb" layoutX="424.0" layoutY="156.0" prefHeight="37.0" prefWidth="230.0" />
+      <Label layoutX="195.0" layoutY="174.0" prefHeight="18.0" prefWidth="190.0" text="About:">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="51.0" text="write your Claim :">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="add" layoutX="680.0" layoutY="605.0" onAction="#add" prefHeight="26.0" prefWidth="182.0" ripplerFill="#b71b1b" style="-fx-background-color: blue;" text="ADD" textFill="#311414" />
+   </children>
+</AnchorPane>

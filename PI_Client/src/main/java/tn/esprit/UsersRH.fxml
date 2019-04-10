@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1168.0" stylesheets="@../css/Background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserRHController">
+   <children>
+      <JFXTextField fx:id="search" layoutX="978.0" layoutY="58.0" onAction="#searchUser" onInputMethodTextChanged="#searchUser" prefHeight="26.0" prefWidth="145.0" />
+      <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="1101.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/look.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="accept" layoutX="977.0" layoutY="636.0" onAction="#addUser" prefHeight="37.0" prefWidth="146.0" style="-fx-background-radius: 45; -fx-border-color: blue;" text="Accept" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="decline" layoutX="816.0" layoutY="636.0" onAction="#declineUser" prefHeight="37.0" prefWidth="146.0" style="-fx-background-radius: 45; -fx-border-color: blue;" text="Decline" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></JFXButton>
+      <TableView fx:id="tbuser" layoutY="103.0" prefHeight="531.0" prefWidth="1168.0">
+        <columns>
+          <TableColumn fx:id="FN" prefWidth="150.0" text="First Name" />
+          <TableColumn fx:id="LN" prefWidth="150.0" text="Last Name" />
+            <TableColumn fx:id="U" prefWidth="150.0" text="Username" />
+            <TableColumn fx:id="EM" prefWidth="268.0" text="Email" />
+            <TableColumn fx:id="C" prefWidth="150.0" text="Country" />
+            <TableColumn fx:id="S" prefWidth="150.0" text="State" />
+            <TableColumn fx:id="R" prefWidth="150.0" text="Role" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1168.0" stylesheets="@../css/Background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeRHController">
+   <children>
+      <VBox layoutX="776.0" layoutY="337.0" prefHeight="357.0" prefWidth="391.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="394.0" style="-fx-background-color: #72D3FE;" text="Claims">
+               <font>
+                  <Font name="Ebrima Bold" size="15.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="cb1" prefHeight="306.0" prefWidth="391.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
