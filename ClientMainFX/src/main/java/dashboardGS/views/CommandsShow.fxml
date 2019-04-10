@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.testapps.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane fx:id="ContenetArea" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboardGS.views.CommandsShowController">
+   <children>
+      <ScrollPane fx:id="scrollPaneID" layoutY="38.0" prefHeight="341.0" prefWidth="632.0">
+        <content>
+            <VBox fx:id="vbID" layoutX="59.0" layoutY="25.0" prefHeight="311.0" prefWidth="627.0" />
+        </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="635.0" spacing="60.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <Region prefHeight="37.0" prefWidth="11.0" />
+            <Label prefHeight="17.0" prefWidth="100.0" text="Gas station Name" textFill="#2b2727">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Gasoline" textFill="#2b2727">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="Diesel" textFill="#2b2727">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="Mazout" textFill="#2b2727">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label text="Action" textFill="#2b2727">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</Pane>
