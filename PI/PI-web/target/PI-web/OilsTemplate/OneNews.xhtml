@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:c="http://java.sun.com/jsp/jstl/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui">
+<head>
+
+<title>Oil-rig a Industrial Category Bootstrap Responsive web Template|Blog :: w3layouts</title>
+    <!--meta tags -->
+    
+
+<meta charset="UTF-8" />
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+
+<meta name="keywords" content="Oil-rig Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    
+
+<script>
+      addEventListener("load", function () {
+      	setTimeout(hideURLbar, 0);
+      }, false);
+      
+      function hideURLbar() {
+      	window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//stylesheets-->
+    <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet" />
+  </head>
+  
+
+<body>
+    <!--headder-->
+    
+
+<div class="header-outs inner_page-banner " id="home">
+      
+
+<div class="headder-top">
+        <!--//navigation section -->
+        <!-- nav -->
+        <nav>
+          
+
+<div id="logo">
+            
+
+<h1><a href="index.html">Oil Rig</a></h1>
+          </div>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          
+
+<ul class="menu mt-2">
+            
+
+<li class="active"><a href="index.html">Home</a></li>
+            
+
+<li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="about.html">About</a></li>
+            
+
+<li><a href="service.html">Services</a></li>
+            
+
+<li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+              <!-- First Tier Drop Down -->
+              <label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true">
+              </span></label>
+              <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true" /></a>
+              <input type="checkbox" id="drop-2" />
+              
+
+<ul>
+                
+
+<li><a href="gallery.html" class="drop-text">Gallery</a></li>
+                
+
+<li><a href="blog.html" class="drop-text">Blog</a></li>
+              </ul>
+            </li>
+            
+
+<li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+    </div>
+    <!-- //Navigation -->
+    <!--//headder-->
+    <!-- short -->
+    
+
+<div class="using-border py-3">
+      
+
+<div class="inner_breadcrumb  ml-4">
+        
+
+<ul class="short_ls">
+          
+
+<li>
+            <a href="index.html">Home</a>
+            <span>/ /</span>
+          </li>
+          
+
+<li>Blog</li>
+        </ul>
+      </div>
+    </div>
+    <!-- //short-->
+    <!--blog-->
+    <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+      
+
+<div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        
+        
+
+<div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+          
+<h3 class="pb-3" style="font-size: 34px; color: #ffb100;">#{newsBean.title}</h3>
+
+</div>
+        
+
+<div class="row">
+     
+
+<div class="col-lg-6 color-img-three">
+           <img src="#{newsBean.img}" alt="news image" class="img-fluid" />
+           <br /> 
+           <b>Published :</b>  #{newsBean.datePub}   
+           <br /> 
+      <b>Description:</b>  <p>  #{newsBean.content}</p>
+          </div>
+          
+
+<div class="col-lg-6 blog-left-sub">
+            
+
+<div class="blog-date-time mt-lg-4 mt-md-3 mt-3">
+              
+
+<ul>
+                
+
+<li><span  class="fa fa-calendar" style="font-size:1.5em;" aria-hidden="true"><a href="about.html"><h:outputText value="#{newsBean.datePub}" /> </a></span></li>
+                
+
+<li><span class="fa fa-comments fa-5x" style="font-size:1.5em;" aria-hidden="true"><h:outputText value="#{newsBean.comments.size()}" />  Comments</span></li>
+              </ul>
+          
+              <ul>
+              <div class="container">
+  <div class="row">
+
+          <div class="sidebar widget">
+          
+              <h3 style="color:navy;">Recent Post #{newsBean.id}</h3>
+              <c:forEach var="comments" items="#{newsBean.comments}"  >
+              <ul>
+               <h:form>
+                <li>
+                
+                    <div class="sidebar-thumb">
+                        <img class="animated rollIn" src="http://shop.spotlayer.com/demo/soft-mag/demo1/wp-content/uploads/16555399183_33b1b1bc26_o-90x75.jpg" alt="" />
+                    </div><!-- .Sidebar-thumb -->
+                    <div class="sidebar-content">
+                        <h5 class="animated bounceInRight">#{comments.content}</h5>
+                    </div><!-- .Sidebar-thumb -->
+                    <div class="sidebar-meta">
+                        <span class="time" ><i class="fa fa-clock-o"></i> #{comments.date}</span>
+                        <b> by </b> <h6 style="color:green">#{comments.publisher.getFirstname()} #{comments.publisher.getLastName()}</h6>
+                        
+                        
+                    </div><!-- .Sidebar-meta ends here -->
+                </li><!-- .Li ends here -->
+                <c:if test="#{comments.publisher.id==loginBean.employe.id}">
+			<h:commandLink style="color:red" action="#{newsBean.deleteComment(comments.id,newsBean.id)}" value="delete" update="@form"/>
+           </c:if>
+            </h:form>
+              </ul><!-- .Ul ends here -->
+         </c:forEach>
+         
+          </div><!-- .Widget ends here -->
+     
+	 
+   
+  </div><!-- .Row ends here -->
+  
+</div><!-- .Container ends here --></ul>
+       
+       
+            </div>
+            
+
+<div class="view-buttn mt-lg-5 mt-md-4 mt-3">
+
+<h:form>
+
+    
+        <p:outputLabel  for="txt" value="Text:" />
+        <p:inputTextarea  id="txt" value="#{newsBean.comment.content}" required="true" />
+        <p:message style="background-color: #f8b7bd; border: 0 none; color: #212121;" for="txt" display="text" />
+
+<h:commandLink action="#{newsBean.addComment(newsBean.id,loginBean.employe.id)}" value="Comment" update="@form"/>
+             
+             
+         </h:form>
+         
+            </div>
+            <div >
+            
+            <div class="ui-messages-info ui-corner-all">
+    
+    <a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    </a><span class="ui-messages-info-icon"></span><ul><li ><span class="ui-messages-info-summary">Info</span><span class="ui-messages-info-detail">Your deal is sent !</span></li></ul></div>
+            
+            </div>
+          </div>
+        </div>
+        
+ 
+      
+      
+      </div>
+    </section>
+    <!--//blog-->
+    
+    
+    
+    
+    
+    <!-- footer -->
+    <footer class="py-lg-4 py-md-3 py-sm-3 py-3">
+      
+
+<div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        
+
+<div class="row">
+          
+
+<div class="col-lg-6 col-md-6 footer-left-grid">
+            
+
+<div class="footer-w3layouts-head">
+              
+
+<h2><a href="index.html">Oil Rig</a></h2>
+            </div>
+            
+
+<div class="mb-1 pt-lg-5 pt-md-4 pt-3 footer-address">
+              
+
+<ul>
+                
+
+<li>
+                  
+
+<h4>Get In Touch</h4>
+                </li>
+                
+
+<li>
+                  
+
+<p>Melbourne st, QLD 4101,Australia</p>
+                </li>
+              </ul>
+            </div>
+            
+
+<div class="mb-1 footer-address">
+              
+
+<ul>
+                
+
+<li>
+                  
+
+<h4>Email</h4>
+                </li>
+                
+
+<li>
+                  
+
+<p><a href="mailto:info@example.com">info@example1.com</a> 
+                  </p>
+                </li>
+              </ul>
+            </div>
+            
+
+<div class="mb-1 footer-address">
+              
+
+<ul>
+                
+
+<li>
+                  
+
+<h4>Phone</h4>
+                </li>
+                
+
+<li>
+                  
+
+<p>+(000) 123 4565 32</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+
+<div class="footer-info-bottom col-lg-6 col-md-6">
+            
+
+<h4 class="pb-lg-4 pb-md-3 pb-3">NewsLetter</h4>
+            
+
+<div class="newsletter">
+              <form action="#" method="post" class="d-flex">
+                <input type="email" name="Your Email" class="form-control" placeholder="Your Email" required="" />
+                <button class="btn1">
+                <span class="fa fa-envelope" aria-hidden="true">
+                </span></button>
+              </form>
+            </div>
+            
+
+<div class="footer-office-hour mt-3">
+              
+
+<p>vehicula velit sagittis vehicula. Duis posuere ex in mollis iaculis. Suspendisse tincidunt velit sagittis vehicula</p>
+            </div>
+            
+
+<div class="icons mt-3 ">
+              
+
+<ul>
+                
+
+<li><a href="#"><span class="fa fa-facebook" /></a></li>
+                
+
+<li><a href="#"><span class="fa fa-twitter" /></a></li>
+                
+
+<li><a href="#"><span class="fa fa-rss" /></a></li>
+                
+
+<li><a href="#"><span class="fa fa-vk" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
+<div class="bottem-wthree-footer text-center pt-lg-5 pt-md-4 pt-3">
+          
+
+<p> 
+            © 2019 Oil rig. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+          </p>
+        </div>
+        <!-- move icon -->
+        
+
+<div class="text-center">
+          <a href="#home" class="move-top text-center mt-3">
+        </a></div></div></footer></body></html>

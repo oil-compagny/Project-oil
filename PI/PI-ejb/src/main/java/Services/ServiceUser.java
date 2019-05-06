@@ -17,7 +17,7 @@ import Entities.User;
 @Stateless
 @LocalBean
 public class ServiceUser implements ServiceUserRemote, ServiceUserLocal {
-
+ 
 	 
     @PersistenceContext
 	private EntityManager em;
@@ -34,6 +34,10 @@ public class ServiceUser implements ServiceUserRemote, ServiceUserLocal {
 		if(sd.isEmpty())
 			return null;
 		return sd.get(1);
+	}
+	public User getUser(int id) {
+		
+		return em.find(User.class, id);
 	}
     @Override
     public List<User> getallUser()

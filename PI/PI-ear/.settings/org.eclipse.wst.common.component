@@ -3,11 +3,9 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
         <dependent-module archiveName="PI-web.war" deploy-path="/" handle="module:/resource/PI-web/PI-web">
-            <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="PI-ejb.jar" deploy-path="/" handle="module:/resource/PI-ejb/PI-ejb">
-            <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>

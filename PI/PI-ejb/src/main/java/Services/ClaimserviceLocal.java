@@ -11,9 +11,9 @@ import Entities.User;
 public interface ClaimserviceLocal {
 
 	public Claim getNextNotTreatedClaim();
-    public void claimIsTreated(int id);
+    public void claimIsTreated(Claim c);
 	public int claimNumber(User u);
-	public List<Claim> historyClaim();
-	public void blockUser(int id );
+	public java.util.List<Claim> historyClaim(User u);
+	public void blockUser(User u);
 	public List<Claim> getNextNotTreatedClaims();
 }

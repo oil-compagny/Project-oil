@@ -52,6 +52,9 @@ public Gas_station getStation() {
 	return station;
 }
 
+@OneToMany(mappedBy="publisher",fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+private List<Participation> participations; 
+
 public void setStation(Gas_station station) {
 	this.station = station;
 }

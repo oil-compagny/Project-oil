@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" 
+xmlns:c="http://java.sun.com/jsp/jstl/core"
+template="/OilsTemplate/myIndex.xhtml"
+>
+<ui:define name="itemnews">
+
+        <c:forEach var="news" items="#{newsBean.allNews}"  >
+
+
+		
+<div class="col-lg-4 blog-grid-behind">
+                  
+<div class="blog-images-us">
+                     <img src="#{news.img}" alt="news image" class="img-fluid" />
+                     
+<div class="blog-wthree-sub">
+                        
+<h4 class="pb-3"><a href="about.xhtml">
+<h:outputText value="#{news.title}" /></a></h4>
+                        
+<p><h:outputText value="#{news.content}" />
+                        </p>
+<div class="blog-date-time mt-lg-4 mt-md-3 mt-3">
+                     
+<ul>
+                        
+<li><span class="fa fa-calendar" aria-hidden="true" /></li>
+                        
+<li><span class="fa fa-comments" aria-hidden="true" />
+<a href=""> <h:outputText value="#{news.comments.size()}" />Comments</a></li>
+                     </ul>
+                     
+	<div class="view-buttn mt-lg-5 mt-md-4 mt-3">
+	
+	
+
+	<h:commandLink value="Read More" action="#{newsBean.readMore(news)}" >
+	 
+ 	</h:commandLink>
+  
+        
+    </div>
+
+                  </div>
+                        
+                     </div>
+                     
+<div class="news-date">
+                        <span>6</span>/May
+                     </div>
+                     
+                  </div>
+               </div>
+
+
+</c:forEach>
+
+             
+               </ui:define>
+</ui:composition>

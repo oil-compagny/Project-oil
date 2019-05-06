@@ -28,7 +28,7 @@ public class Gas_station implements Serializable {
 	@OneToOne(fetch=FetchType.EAGER)
 	private User gerant = new User() ;
 	
-	@OneToMany (mappedBy="station",fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@OneToMany (mappedBy="station",fetch=FetchType.EAGER)
 	private List <User> workers;
 
 /*** Constructeurs ***/ 

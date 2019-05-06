@@ -3,12 +3,15 @@ F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Shift.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\StateServiceLocal.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Type.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\CountrieServiceRemote.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Comments.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Participation.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\StateService.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\User.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\StateServiceRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\UserServiceImpl.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\CountrieService.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\ConnectedUser.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Interfaces\INewsServiceRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Interfaces\IUserServiceRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Commande.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\Claimservice.java
@@ -18,6 +21,7 @@ F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\CountrieServiceLocal.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Gas_station.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Interfaces\ICisternServiceRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\ClaimserviceLocal.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Interfaces\ICommentsService.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Accounting.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Interfaces\IGas_StationServiceRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\ServiceUserLocal.java
@@ -28,6 +32,9 @@ F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\ServiceUserRemote.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Claim.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Role.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\Gas_StationService.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\NewsService.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\News.java
+F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\CommentsService.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Services\Cistern_Service.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Pump.java
 F:\JEE\workspace\PI\PI-ejb\src\main\java\Entities\Details.java

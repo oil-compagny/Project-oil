@@ -1,3 +1,4 @@
+Entities\News.class
 Services\Gas_StationService.class
 Entities\Commande.class
 Services\ClaimserviceLocal.class
@@ -13,14 +14,17 @@ Services\ClaimserviceRemote.class
 Entities\Shift.class
 Entities\Accounting.class
 Entities\Type.class
+Services\CommentsService.class
 Services\StateServiceLocal.class
 Interfaces\IUserServiceRemote.class
 Entities\Claim.class
+Services\NewsService.class
 Entities\States.class
 Services\StateService.class
 Entities\Role.class
 Entities\Pump.class
 Services\Cistern_Service.class
+Entities\Participation.class
 Services\Claimservice.class
 Interfaces\ICisternServiceRemote.class
 Services\CountrieService.class
@@ -28,6 +32,9 @@ Entities\Gas_station.class
 Interfaces\IGas_StationServiceRemote.class
 Services\ServiceUser.class
 Services\ServiceUserLocal.class
+Interfaces\ICommentsService.class
+Interfaces\INewsServiceRemote.class
+Entities\Comments.class
 Services\CountrieServiceLocal.class
 Entities\Cistern.class
 Entities\Details.class
