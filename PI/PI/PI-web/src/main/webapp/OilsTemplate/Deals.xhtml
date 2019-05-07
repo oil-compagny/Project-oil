@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" 
+template="/OilsTemplate/MyIndex.xhtml">
+<ui:define name="MyProjects">
+
+        <iframe width="90%" height="300px" src="https://www.watchisup.fr/compte-a-rebours/embed/2019-05-09-00-00-44" ></iframe>
+   
+<ui:repeat value="#{projectBean.afficher_projects()}" var="project">
+	   
+     
+                     <div class="col-lg-4 blog-grid-behind">
+                  
+<div class="blog-images-us">
+                     <img src="images/blog2.jpg" alt="news image" class="img-fluid" />
+                     
+<div class="blog-wthree-sub">
+       
+<h4 class="pb-3"><a href="about.xhtml"><h:outputText value="#{project.projectname}" /></a></h4>
+  
+     
+             <h:outputText value="#{project.details}" />
+               <ul>
+                        
+ <li><b style="color:red">Deadline</b>   <span class="fa fa-calendar" aria-hidden="true"></span>   <h:outputText value="   #{project.date}" /></li>
+  <li><b style="color:blue">Project budget </b>   <span class="fa fa-dollar" style="background-color:yellow" aria-hidden="true"></span>   <h:outputText value=" Not declared ! " /></li>                      
+            </ul>
+               <h:form>
+           <div class="view-buttn mt-lg-5 mt-md-4 mt-3">
+            
+           
+                   <h:commandLink action="#{projectBean.MakeDeal(project)}" value="Make Deal" class=" scroll">
+                   
+                   </h:commandLink>
+                
+                 </div>
+                 </h:form>
+                     </div>
+                     
+                     
+<div class="news-date">
+                        <a href="about.xhtml"><span><h:outputText value="#{project.date.date}" /></span>/<h:outputText  value="#{project.date.month+1}" /></a>
+                     </div>
+                  </div>
+               </div>
+    
+</ui:repeat>
+              
+</ui:define>
+</ui:composition>
+
+
