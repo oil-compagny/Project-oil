@@ -102,6 +102,21 @@ public class NewsService implements INewsServiceRemote {
 				return p;
 			}
 			}
+		public long forStrick(int idNews)
+		{
+			long a = (long) em.createQuery("select sum(p.pour) from Participation p where p.news=:n ").setParameter("n", em.find(News.class, idNews)).getSingleResult();
+			
+			return a;
+		}
+		
+		public long contreStrick(int idNews)
+		{
+			long a = (long) em.createQuery("select sum(p.contre) from Participation p where p.news=:n ").setParameter("n", em.find(News.class, idNews)).getSingleResult();
+			
+			return a;
+		}
+		
+		
 		}
 	
 	

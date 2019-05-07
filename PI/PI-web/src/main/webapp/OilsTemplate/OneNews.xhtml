@@ -129,6 +129,7 @@ xmlns:p="http://primefaces.org/ui">
     </div>
     <!-- //short-->
     <!--blog-->
+    <h:head>
     <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
       
 
@@ -172,6 +173,47 @@ xmlns:p="http://primefaces.org/ui">
            <b>Published :</b>  <li><span  class="fa fa-calendar" style="font-size:1.5em;color:#eea236;" aria-hidden="true"><h:outputText value="#{newsBean.datePub}" /></span></li>  
            <br /> 
       <b>Description:</b>  <p>  #{newsBean.content}</p>
+      
+      
+        <div id="piechart_3d" style="width: 500px; height: 300px;">
+           <input type="hidden" id="p1" value="#{newsBean.pour}" />
+           <input type="hidden" id="p2" value="#{newsBean.contre}" />
+
+           
+			    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			    <script type="text/javascript">
+			    
+			      google.charts.load("current", {packages:["corechart"]});
+			      google.charts.setOnLoadCallback(drawChart);
+			      function drawChart() 
+			      {var  pour= parseInt(document.getElementById("p1").value);
+			      var  contre= parseInt(document.getElementById("p2").value);
+			     
+			      
+			        var data = google.visualization.arrayToDataTable([
+			          ['Opinion', 'Nbre of votes', { role: "style" } ],
+			          ['For ',pour,"color: green"],
+			          ['Against',contre,"color: red"],
+			          
+			     ]);
+			
+			        var options = {
+			          title: 'Votes',
+			          is3D: true,
+			        };
+			
+			        var chart = new google.visualization.ColumnChart(document.getElementById('piechart_3d'));
+			        chart.draw(data, options);
+			      }
+			    </script>
+          
+      
+          </div>
+      
+      
+      
+      
+      
           </div>
           
 
@@ -235,19 +277,19 @@ xmlns:p="http://primefaces.org/ui">
             
 
 <div class="view-buttn mt-lg-5 mt-md-4 mt-3">
-
+<h:head>
 <h:form>
 
     
         <p:outputLabel  for="txt" value="Text:" />
         <p:inputTextarea  id="txt" value="#{newsBean.comment.content}" required="true" />
         <p:message style="background-color: #f8b7bd; border: 0 none; color: #212121;" for="txt" display="text" />
-
+		<h:message id="bad" for="bad"/>
 <h:commandLink action="#{newsBean.addComment(newsBean.id,loginBean.employe.id)}" value="Comment" update="@form"/>
              
              
          </h:form>
-         
+         </h:head>
             </div>
 
           </div>
@@ -260,7 +302,7 @@ xmlns:p="http://primefaces.org/ui">
     </section>
     <!--//blog-->
     
-    
+    </h:head>
     
     
     

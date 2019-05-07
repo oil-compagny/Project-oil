@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Init;
 import javax.faces.application.FacesMessage;
@@ -33,8 +34,8 @@ private String pageId;;
 private int id;
 private String title;
 private String content;
-private int pour;
-private int contre;
+private long pour;
+private long contre;
 private String img;
 private List<Comments> comments;
 private Date datePub;
@@ -42,6 +43,16 @@ private Comments comment=new Comments();
 private News SelectedNews;
 private Participation participation;
 private List<String> grosmots;
+
+@PostConstruct
+public void init()
+{
+	grosmots=new ArrayList<>();
+	grosmots.add("gm1");
+	grosmots.add("gm2");
+	grosmots.add("Bad words used");
+	System.out.println(grosmots);
+}
 
 @EJB
 private CommentsService commentService;
@@ -60,6 +71,42 @@ public NewsService getNewsService() {
 
 public void setNewsService(NewsService newsService) {
 	this.newsService = newsService;
+}
+
+
+
+
+
+
+public long getPour() {
+	return pour;
+}
+
+
+
+
+
+
+public void setPour(long pour) {
+	this.pour = pour;
+}
+
+
+
+
+
+
+public long getContre() {
+	return contre;
+}
+
+
+
+
+
+
+public void setContre(long contre) {
+	this.contre = contre;
 }
 
 
@@ -230,6 +277,9 @@ public void setParticipation(Participation participation) {
 public String readMore(News news,int idU) 
  {String navigateTo = "/OilsTemplate/OneNews?faces-redirect=true";
 
+	grosmots.add("gm1");
+	grosmots.add("gm2");
+	System.out.println(grosmots);
 id=news.getId();
 img=news.getImg();
 comments= news.getComments();
@@ -237,23 +287,24 @@ title=news.getTitle();
 content=news.getContent();
 datePub=news.getDatePub();
 participation = newsService.particiaption(id,idU);
+pour=newsService.forStrick(news.getId());
+contre=newsService.contreStrick(news.getId());
 	return navigateTo;
 	 
  }
+
 public String addComment(int idNews,int idPublisher)
 {
-	grosmots=new ArrayList<>();
-	grosmots.add("gm1");
-	grosmots.add("gm2");
+	
 	Comments c = new Comments();
-	System.out.println(grosmots);
+
 	for(String s :grosmots)
-	{ System.out.println("TEST "+s);
-	System.out.println(content.indexOf(s));
-		if(content.indexOf(s)!=-1)
+	{ 
+		if(comment.getContent().contains(s))
 		{
-			FacesContext.getCurrentInstance().addMessage("form:txt", new FacesMessage("Bad Credentials"));
-			return null;
+			
+			comment.setContent("Bad words used");
+			return "";
 		}
 	}
 	c.setContent(comment.getContent());
@@ -262,7 +313,7 @@ public String addComment(int idNews,int idPublisher)
 	News n = newsService.getNews(idNews);
 	c.setPublisher(u);
 	c.setNews(n);
-System.out.println("TEST"+c);
+
 
 	commentService.addComment(c);
 	n = newsService.getNews(n.getId());
@@ -289,7 +340,8 @@ public String Participate(int idUser,int idNews)
 {
 	newsService.participate(idUser, idNews);
 	participation=newsService.particiaption(idNews, idUser);
-	 
+	pour=newsService.forStrick(idNews);
+	contre=newsService.contreStrick(idNews);
 	return "/OilsTemplate/OneNews?faces-redirect=true";
 	
 }
@@ -297,7 +349,8 @@ public String Cancel(int idUser,int idNews)
 {
 	newsService.Cancel(idUser, idNews);
 	participation=newsService.particiaption(idNews, idUser);
-	 
+	pour=newsService.forStrick(idNews);
+	contre=newsService.contreStrick(idNews);
 	return "/OilsTemplate/OneNews?faces-redirect=true";
 	
 }

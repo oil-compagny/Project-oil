@@ -53,14 +53,14 @@
                     <form class="m-t" jsf:id="form">
                     
                         <div class="form-group">
-                            <input jsf:id="login"  type="text" value="#{identity.user.login}" class="form-control" placeholder="Username" required="required"></input>
+                            <input jsf:id="login"  type="text" value="#{loginBean.login}" class="form-control" placeholder="Username" required="required"></input>
                         </div>
                         
                         <div class="form-group">
-                            <input jsf:id="pass"  type="password" value="#{identity.user.password}" class="form-control" placeholder="password" required="required"></input> 
+                            <input jsf:id="pass"  type="password" value="#{loginBean.password}" class="form-control" placeholder="password" required="required"></input> 
                         </div>
                         
-                        <button jsf:action="#{identity.doLogin()}" type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                        <button jsf:action="#{loginBean.doLogin()}" type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
                         <a href="#">
                             <small>Forgot password?</small>
