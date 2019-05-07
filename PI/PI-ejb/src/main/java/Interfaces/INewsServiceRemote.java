@@ -10,7 +10,8 @@ import Entities.News;
 public interface INewsServiceRemote {
 
 	public List<News> getAllNews();
-	
+	public void participate(int idU,int idNews);
+	public void Cancel(int idU, int idNews) ;
 	
 	
 }

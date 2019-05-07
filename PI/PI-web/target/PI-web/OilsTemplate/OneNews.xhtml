@@ -138,7 +138,7 @@ xmlns:p="http://primefaces.org/ui">
 
 <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
           
-<h3 class="pb-3" style="font-size: 34px; color: #ffb100;">#{newsBean.title}</h3>
+<h3 class="pb-3" style="font-size: 34px; color: #ffb100; ">#{newsBean.title}</h3>
 
 </div>
         
@@ -149,7 +149,27 @@ xmlns:p="http://primefaces.org/ui">
 <div class="col-lg-6 color-img-three">
            <img src="#{newsBean.img}" alt="news image" class="img-fluid" />
            <br /> 
-           <b>Published :</b>  #{newsBean.datePub}   
+           <h:form>
+           <c:if test="#{newsBean.participation.pour==0}">
+           <h:commandLink style="color:blue;" action="#{newsBean.Participate(loginBean.employe.id,newsBean.id)}" >
+           				<i style="font-size:3em;" class="fa fa-plus"/></h:commandLink>
+                     </c:if>
+                        <c:if test="#{newsBean.participation.pour==1}">
+           				<h:commandLink style="color:green;" action="#{newsBean.Participate(loginBean.employe.id,newsBean.id)}" >
+           				<i style="font-size:3em;" class="fa fa-plus"/></h:commandLink>
+                     </c:if>
+                     
+                     <c:if test="#{newsBean.participation.contre==0}">
+                     <h:commandLink style="color:blue;" action="#{newsBean.Cancel(loginBean.employe.id,newsBean.id)}" >
+                     <i style="font-size:3em;" class="fa fa-minus"/></h:commandLink>
+         			 </c:if>
+                               	
+                     <c:if test="#{newsBean.participation.contre==1}">
+                     <h:commandLink style="color:red;" action="#{newsBean.Cancel(loginBean.employe.id,newsBean.id)}" >
+                     <i style="font-size:3em;" class="fa fa-minus"/></h:commandLink>
+          			</c:if>
+          </h:form>
+           <b>Published :</b>  <li><span  class="fa fa-calendar" style="font-size:1.5em;color:#eea236;" aria-hidden="true"><h:outputText value="#{newsBean.datePub}" /></span></li>  
            <br /> 
       <b>Description:</b>  <p>  #{newsBean.content}</p>
           </div>
@@ -164,10 +184,10 @@ xmlns:p="http://primefaces.org/ui">
 <ul>
                 
 
-<li><span  class="fa fa-calendar" style="font-size:1.5em;" aria-hidden="true"><a href="about.html"><h:outputText value="#{newsBean.datePub}" /> </a></span></li>
+
                 
 
-<li><span class="fa fa-comments fa-5x" style="font-size:1.5em;" aria-hidden="true"><h:outputText value="#{newsBean.comments.size()}" />  Comments</span></li>
+<li><span class="fa fa-comments fa-5x" style="font-size:2em;color:#5bc0de" aria-hidden="true"><h:outputText value="#{newsBean.comments.size()}" />  Comments</span></li>
               </ul>
           
               <ul>
@@ -189,7 +209,7 @@ xmlns:p="http://primefaces.org/ui">
                         <h5 class="animated bounceInRight">#{comments.content}</h5>
                     </div><!-- .Sidebar-thumb -->
                     <div class="sidebar-meta">
-                        <span class="time" ><i class="fa fa-clock-o"></i> #{comments.date}</span>
+                        <span class="time" ><i class="fa fa-clock-o" ></i> <i >#{comments.date}</i></span>
                         <b> by </b> <h6 style="color:green">#{comments.publisher.getFirstname()} #{comments.publisher.getLastName()}</h6>
                         
                         
@@ -229,14 +249,7 @@ xmlns:p="http://primefaces.org/ui">
          </h:form>
          
             </div>
-            <div >
-            
-            <div class="ui-messages-info ui-corner-all">
-    
-    <a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
-    </a><span class="ui-messages-info-icon"></span><ul><li ><span class="ui-messages-info-summary">Info</span><span class="ui-messages-info-detail">Your deal is sent !</span></li></ul></div>
-            
-            </div>
+
           </div>
         </div>
         

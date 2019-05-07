@@ -37,7 +37,7 @@ template="/OilsTemplate/myIndex.xhtml"
 	
 	
 
-	<h:commandLink value="Read More" action="#{newsBean.readMore(news)}" >
+	<h:commandLink value="Read More" action="#{newsBean.readMore(news,loginBean.employe.id)}" >
 	 
  	</h:commandLink>
   
